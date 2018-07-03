@@ -1,6 +1,17 @@
-ver1 = []
-
-for i in range(2):
-    x = eval(input("enter your %d vertix: "%(i+1)))
-    ver1.append(x)
-print(ver1)
+def takeInput():
+    var1 = []
+    for i in range(2):
+        x = eval(input("enter the vertixs:"))
+        var1.append(x)
+    return(var1)
+def takeInputb():
+    var1 = []
+    var2 = []
+    for i in range(2):
+        x = takeInput()
+        var1.append(x)
+    for i in range(2):
+        x = takeInput()
+        var2.append(x)    
+    return (var1 , var2)
+print(takeInputb())
