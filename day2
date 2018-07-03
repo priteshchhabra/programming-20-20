@@ -1,0 +1,6 @@
+ver1 = []
+i = 1
+for i in range(2):
+    x = input("enter your %d vertix: "%i)
+    ver1.append(x)
+print(ver1)
