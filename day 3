@@ -5,4 +5,16 @@ def inpt():
         y = int(input("Enter the %d element :"%(i+1)))
         elmnt.append(y)
     return(elmnt)
-print(inpt())    
+t = inpt()
+def decode(t):
+    emlnt = []
+    for i in range(len(t)):
+        if t[i] == 0 and t[i+1] != 0 and t[i+2] != 0:
+            for i in range(t[i+1]):
+                emlnt.append(t[i+2])
+        elif t[i] == 0 and t[i+1] == 0:
+            emlnt.append(0)
+        else:
+            emlnt.append(t[i])
+    return emlnt
+print(decode(t))
