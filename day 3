@@ -1,0 +1,10 @@
+def input(): 
+    elmnt = []
+    n = int(input("Enter the number of sequences needed to be decoded:"))
+    for i in range(n):
+        x = int(input("Enter the number of elements present in the sequence:"))
+        for i in range(x):
+            y = int(input("enter the %d element ;"%i))
+            elmnt.append(y)
+    return elmnt
+print(input())
