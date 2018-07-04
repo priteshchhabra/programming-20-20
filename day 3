@@ -8,13 +8,18 @@ def inpt():
 t = inpt()
 def decode(t):
     emlnt = []
-    for i in range(len(t)):
+    i = 0
+    while i < len(t):
         if t[i] == 0 and t[i+1] != 0 and t[i+2] != 0:
             for i in range(t[i+1]):
                 emlnt.append(t[i+2])
+            i += 3
         elif t[i] == 0 and t[i+1] == 0:
             emlnt.append(0)
+            i += 2
         else:
             emlnt.append(t[i])
+            i += 1
     return emlnt
 print(decode(t))
+                  
