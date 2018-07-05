@@ -1,10 +1,15 @@
+import pdb
 def inptSuduko():
-    row = []
+    pdb.set_trace()
+    rowFinal = []
     print("enter 0 if you don't want to fill a space in the row:")
-    for i in range(9):
-        r = int(input("enter the numbers in the 1st row:"))
-        row.append(r)
-    return (row)
+    for i in range(0,9):
+        row = []
+        for j in range(0,9):
+            r = int(input("enter the numbers in the elements row:"))
+            row.append(r)
+        rowFinal.append(row)
+    return (rowFinal)
 s = inptSuduko()
 print(s)
 
@@ -30,21 +35,14 @@ def checkRow(s):
                 flag = 1
         return (flag)
 r = checkRow(s)
-
-
-def printSuduko(s):
-    rw = []
-    for i in range(8):
-        x = s
-        rw.append(x)
-    return rw
-y = printSuduko(s)
-print(y)    
-
 if r == 0:
     print("inviable")
 elif r == 1:
     print("viable")
 else:
     print("viable and not complete")
+        
+    
+        
+        
     
