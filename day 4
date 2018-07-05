@@ -6,3 +6,22 @@ def inptSuduko():
     return (row)
 s = inptSuduko()
 print(s)
+
+def checkRow(s):
+    row = []
+    for i in range(len(s)):
+        flag = 0
+        x = s[i]
+        del s[i]
+        if x in s:
+            flag = 0
+            exit
+        else:
+            flag = 1
+        return (flag)
+print(flag)
+    
+            
+        
+        
+    
