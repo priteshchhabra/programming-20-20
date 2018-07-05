@@ -1,5 +1,6 @@
 def inptSuduko():
     row = []
+    print("enter 0 if you don't want to fill a space in the row:")
     for i in range(9):
         r = int(input("enter the numbers in the 1st rom:"))
         row.append(r)
@@ -11,21 +12,36 @@ def checkRow(s):
     row = []
     for i in range(len(s)):
         flag = 0
-        x = s[i]
-        del s[i]
-        if x in s:
-            flag = 0
-            exit
+        if 0 not in s:
+            x = s[i]
+            del s[i]
+            if x in s:
+                flag = 0
+                exit
+            else:
+                flag = 1
         else:
-            flag = 1
+            x = s[i]
+            del s[i]
+            if x not in s:
+                flag = 2
+                exit
+            else:
+                flag = 1
         return (flag)
 r = checkRow(s)
 if r == 0:
     print("inviable")
-else:
+elif r == 1:
     print("viable")
+else:
+    print("viable and not complete")
     
             
+        
+        
+    
+           
         
         
     
