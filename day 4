@@ -1,6 +1,4 @@
-import pdb
 def inptSuduko():
-    pdb.set_trace()
     rowFinal = []
     print("enter 0 if you don't want to fill a space in the row:")
     for i in range(0,9):
@@ -41,8 +39,3 @@ elif r == 1:
     print("viable")
 else:
     print("viable and not complete")
-        
-    
-        
-        
-    
