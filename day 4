@@ -2,7 +2,7 @@ def inptSuduko():
     row = []
     print("enter 0 if you don't want to fill a space in the row:")
     for i in range(9):
-        r = int(input("enter the numbers in the 1st rom:"))
+        r = int(input("enter the numbers in the 1st row:"))
         row.append(r)
     return (row)
 s = inptSuduko()
@@ -23,29 +23,28 @@ def checkRow(s):
         else:
             x = s[i]
             del s[i]
-            if x not in s:
+            if x in s:
                 flag = 2
                 exit
             else:
                 flag = 1
         return (flag)
 r = checkRow(s)
+
+
+def printSuduko(s):
+    rw = []
+    for i in range(8):
+        x = s
+        rw.append(x)
+    return rw
+y = printSuduko(s)
+print(y)    
+
 if r == 0:
     print("inviable")
 elif r == 1:
     print("viable")
 else:
     print("viable and not complete")
-    
-            
-        
-        
-    
-           
-        
-        
-    
-
-        
-        
     
