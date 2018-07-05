@@ -1,0 +1,8 @@
+def inptSuduko():
+    row = []
+    for i in range(9):
+        r = int(input("enter the numbers in the 1st rom:"))
+        row.append(r)
+    return (row)
+s = inptSuduko()
+print(s)
