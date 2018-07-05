@@ -19,9 +19,17 @@ def checkRow(s):
         else:
             flag = 1
         return (flag)
-print(flag)
+r = checkRow(s)
+if r == 0:
+    print("inviable")
+else:
+    print("viable")
     
             
+        
+        
+    
+
         
         
     
