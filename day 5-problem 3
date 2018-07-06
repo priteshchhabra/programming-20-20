@@ -1,5 +1,30 @@
-def inputtStringgs():
+def inputStrings():
     x = input("enter the word you want to find Palindrome Trawler:")
     return x
-s = inputtStringgs()
+s = inputStrings()
 print(s)
+
+def getStrings(s):
+    y = int(input("enter the palindromes you need to check:"))
+    for i in range(y):
+        x = int(input("enter the position of letter you need to check from:"))
+        z = int(input("enter the postion of the letter  you need to check till:"))
+        for i in range(x,z):
+            str = s
+            l = str[x:z]
+        print(l)
+        return (l)
+
+def checkPalindrome(g):
+    m = l
+    if m[1::] == m[::-1]:
+        print("is a palindrome")
+    else:
+        print("not a palindrome")
+g = getStrings(s)
+
+
+
+
+
+
