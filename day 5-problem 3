@@ -1,0 +1,5 @@
+def inputtStringgs():
+    x = input("enter the word you want to find Palindrome Trawler:")
+    return x
+s = inputtStringgs
+print(s)
