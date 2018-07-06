@@ -4,16 +4,17 @@ def inputStrings():
 s = inputStrings()
 print(s)
 def getStrings(s):
-    y = int(input("enter the number  palindromes you need to be check:"))
+    y = len(s)
+    p = []
+    
     for i in range(y):
-        x = int(input("enter the position of letter you need to check from:"))
-        z = int(input("enter the postion of the letter  you need to check till:"))
+        x = 0
         str = s
         l = str[x:z]
         m = l
         if m == m[::-1]:
-            print("is a palindrome")
+            p.append(m)
         else:
-            print("not a palindrome")
-
+            pass
+    print(p)
 getStrings(s)
