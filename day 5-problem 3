@@ -4,17 +4,26 @@ def inputStrings():
 s = inputStrings()
 print(s)
 def getStrings(s):
-    y = len(s)
+    y = 3
+    z = -1
     p = []
-    
-    for i in range(y):
+    x = 0
+    for i in range(len(s)):
+        for i in range(len(s[0:z-1])):
+            l = s[x:x+y]
+            m = l
+            if m == m[::-1]:
+                p.append(m)
+            else:
+                pass
+            x = x+1
+        y = y+1
+        z = z-1
         x = 0
-        str = s
-        l = str[x:z]
-        m = l
-        if m == m[::-1]:
-            p.append(m)
-        else:
-            pass
     print(p)
 getStrings(s)
+
+
+
+
+
