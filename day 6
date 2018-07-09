@@ -1,0 +1,22 @@
+def takePoints():
+    x = int(input("enter the the Points scored by the team:"))
+    return x
+
+t = takePoints()
+    
+def f(t):
+    if(t == 0):
+        return 1
+    elif(t == 1):
+        return 1
+    elif(t == 2):
+        return 2
+    elif(t == 3):
+        return 4
+    else:
+        return f(t-3)+f(t-2)+f(t-1)
+
+w = f(t)
+def outputfun(t,w):
+    print( t , 'points :' ,w, 'ways')
+o = outputfun(t,w)
