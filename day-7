@@ -1,0 +1,16 @@
+class day7:
+    n1 , n2    
+    def FibonacciString(self,n1,n2):
+        self.x = int(input("enter the number of times the sequence needs to be displayed:"))
+        self.n1 = str(input("please enter the 1st string:"))
+        self.n2 = str(input("please enter the 2nd string:"))
+        return self.n1,self.n2,self.x
+
+    def printSequnece(self,f):
+        n = n1+n2
+        return n
+                
+    f = FibonacciString(0,n1,n2)
+    p = printSequnece(f)
+    print(p)
+day7()
