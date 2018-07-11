@@ -12,5 +12,6 @@ def compute():
     for i in range(n.instances(n)):
         x = int(input(" please enter your %d fraction"%(i+1)))
         sum += 1/x
-    return Fraction(sum.as_integer_ratio())
-print(compute())    
+    return sum.as_integer_ratio()
+x,y = compute()
+print(x,"/",y)
