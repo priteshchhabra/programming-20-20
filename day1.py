@@ -14,4 +14,4 @@ def compute():
         sum += 1/x
     return sum.as_integer_ratio()
 x,y = compute()
-print(x,"/",y)
+print("%d/%d"%(x,y))
