@@ -1,8 +1,8 @@
 class point:
     def __init__(self):
         x = []
-    def add_point(self):
-        x.append()
+    def add_point(self,a):
+        x.append(a)
 class display:
     def print_point(self):
         p = point()
