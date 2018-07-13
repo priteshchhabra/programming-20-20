@@ -1,16 +1,29 @@
 class point:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+class points:
     def __init__(self):
-        x = []
-    def add_point(self,a):
-        x.append(a)
-class display:
-    def print_point(self):
-        p = point()
-        x = int(input("enter the point:"))
-        p.add_point(x)
-        return p
-d=display()
-print(d.print_point())
+        self.l = []
+    def add_point(self,u):
+        self.l.append(u)
 
-        
-    
+class UI:
+    def input(self):
+        p = points()
+        n = int(input("enter the no. of points:"))
+        for i in range(n):
+            a = float(input("enter the x-coordinate: "))
+            b = float(input("enter the y-coordinate : "))
+            w = point(a,b)
+            p.add_point(w)
+        return p 
+    def output(self,imprt):
+        j = 0
+        for i in imprt.l:
+            j += 1
+            print("point %d : (%d,%d)"%(j,i.x ,i.y ))
+
+u = UI()
+b = u.input()
+o = u.output(b)
