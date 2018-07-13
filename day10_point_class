@@ -1,0 +1,16 @@
+class point:
+    def __init__(self):
+        x = []
+    def add_point(self):
+        x.append()
+class display:
+    def print_point(self):
+        p = point()
+        x = int(input("enter the point:"))
+        p.add_point(x)
+        return p
+d=display()
+print(d.print_point())
+
+        
+    
