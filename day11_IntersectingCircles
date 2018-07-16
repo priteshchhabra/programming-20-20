@@ -1,0 +1,35 @@
+class point:
+    def __init__(self,r,x,y):
+        self.r=r
+        self.x=x
+        self.y=y
+class points:
+    def __init__(self):
+        self.p = []
+
+    def add_points(self,c):
+        self.p.append(c)
+
+class UI:
+    def input(self):
+        p = points()
+        for i in range(2):
+            r = float(input("enter the radius"))
+            x = float(input("enter the x - coordinate"))
+            y = float(input("enter the y - coordinate"))
+            w = point(r,x,y)
+            p.add_points(w)
+            
+        return(p)
+
+    def output(self,imprt):
+        for i in imprt.p:
+            print("point : (%d,%d,%d)"%(i.r,i.x,i.y))
+
+u = UI()
+b = u.input()
+o = u.output(b)
+        
+
+                
+        
