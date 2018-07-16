@@ -1,11 +1,16 @@
+import math
 class point:
-    def __init__(self,r,x,y):
+    def __init__(self,r,x,y,r2,x2,y2):
         self.r=r
         self.x=x
         self.y=y
+        self.r2=r2
+        self.x2=x2
+        self.y2=y2
 class points:
     def __init__(self):
         self.p = []
+        self.q = []
 
     def add_points(self,c):
         self.p.append(c)
@@ -13,23 +18,34 @@ class points:
 class UI:
     def input(self):
         p = points()
-        for i in range(2):
-            r = float(input("enter the radius"))
-            x = float(input("enter the x - coordinate"))
-            y = float(input("enter the y - coordinate"))
-            w = point(r,x,y)
-            p.add_points(w)
+        r = float(input("enter the radius"))
+        x = float(input("enter the x - coordinate"))
+        y = float(input("enter the y - coordinate"))
+        r2 = float(input("enter the radius"))
+        x2 = float(input("enter the x - coordinate"))
+        y2 = float(input("enter the y - coordinate"))
+        w = point(r,x,y,r2,x2,y2)
+        p.add_points(w)
             
         return(p)
 
-    def output(self,imprt):
+    def compt(self,imprt):        
         for i in imprt.p:
-            print("point : (%d,%d,%d)"%(i.r,i.x,i.y))
+            a = (i.r-i.r2)**2
+            b = (i.x-i.x2)**2 + (i.y-i.y2)**2
+            c = (i.r+i.r2)**2
+        if a<=b<=c:
+            return "The circles intersect."
+        else:
+            return "The circles do not intersect."
+
+        
+            
 
 u = UI()
 b = u.input()
-o = u.output(b)
-        
+c = u.compt(b)
+print(c)
 
                 
         
