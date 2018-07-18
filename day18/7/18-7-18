@@ -1,11 +1,13 @@
 class employee:
+    name
+    hourly Wage
 class employees:
-class employee_hourlyWage:
-class employees_hourlyWage:
+    list of employee
 class employee_timeCard:
+    name
+    time inmins
 class employees_timeCards:
-class minutesWorked:
-class allEmployee_minutesWorked:
+    list of employee time cards.
 class UI:
 class do_compute:
 class print_output:
