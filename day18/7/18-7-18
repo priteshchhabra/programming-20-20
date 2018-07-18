@@ -1,13 +1,59 @@
-class employee:
-    name
-    hourly Wage
+class c_employee:
+    def __init__(self,name,wage):
+        self.name = name
+        self.wage = wage
+
 class employees:
-    list of employee
+    def __init__(self):
+        self.employee_details=[]
+        self.wages=[]    
+    def add_employee_details(self,c):
+        self.employee_details.append(c)
+    def add_wages(self,w):
+        self.wages.append(w)
 class employee_timeCard:
-    name
-    time inmins
+    def __init__(self,employeee,time):
+        self.employee=employeee
+        self.time=time
+
 class employees_timeCards:
-    list of employee time cards.
+    def __init__(self):
+        self.timecard=[]
+        self.time=[]
+    def make_timeCards(self,t):
+        self.timecard.append(t)
+    def add_time(self,h):
+        self.time.append(t)
+
+
 class UI:
+    def input_employeeDetails(self):
+        es = employees()
+        r = int(input("enter the number of employees in the company: "))
+        for i in range(r):
+            n = input("enter the %d employee name:" %(i+1))
+            m = float(input("enter the wage of %d employee: " %(i+1)))
+            e = c_employee(n,m)
+            es.add_employee_details(e)
+            es.add_wages(m)
+            
+
+    def input_employeeWorked(self):
+        tc = employees_timeCards
+        r = int(input("enter the number of postcard submited this week: "))
+        for i in range(n):
+            n = input("enter the name of the employee:")
+            t = int(input("enter the time worked by the employee"))
+            c = employee_timeCard(n,t)
+            tc.add_time(t)
+            tc.make_timeCards(c)
+        return tc
+    
 class do_compute:
-class print_output:
+    pass
+class int_output:
+    pass
+u = UI()
+u.input_employeeDetails()
+
+
