@@ -1,5 +1,5 @@
 class set:
-    def _init__(self,lower_bound,upper_bound):
+    def __init__(self,lower_bound,upper_bound):
         self.lower_bound=lower_bound
         self.upper_bound=upper_bound
 class sets:
@@ -7,23 +7,50 @@ class sets:
         self.union=[]
     def closed_intervals(self,u):
         self.union.append(u)
+        self.union.sort()
         
     
 class UI:
-    def input(self,n):
-        self.n = int(input("Enter the number of sets to be entered:"))
+    def input(self):
+        n = int(input("Enter the number of sets to be entered:"))
         s = sets()
         for i in range(n):
             x = int(input("Enter the lower bound"))
             y = int(input("Enter the upper bound"))
             w = set(x,y)
             s.closed_intervals(w)
-        return s       
+        return(s)       
 
+    def print_output(self):
+        #o = union()
+        print("You are in OUTPUT")
+        
+        
+    
+class union:
+    def __init__(self,x):
+        self.x=x
     def sort(self,imprt):
-        x = imprt.union.sort()
-        return x
-    
-    def print_output:
-    print
-    
+        self.x = imprt.UI.input()
+    def compare(self):
+        s = sets()
+        for i in self.x:
+            for j in self.x:
+                if j[0:] > i[0:]:
+                    if j[1]>i[0]:
+                        w = set(j[1],i[0])
+                        s.closed_intervals(w)
+                        del i[1:]
+                        break
+                    else:
+                        del i[1:]
+                        break
+                else:
+                    pass
+        return(s)
+
+                    
+u =  UI()
+a=u.input()
+print(union.compare())
+c=u.print_output()
