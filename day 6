@@ -1,35 +1,52 @@
-def takePoints():
-    r = []
-    n = int(input("enter the number of inputs to be entered:"))
-    for i in range(n):
-        x = int(input("enter the the Points scored by the team:"))
-        r.append(x)
-    return r
-
+class set:
+    def __init__(self,lower_bound,upper_bound):
+        self.lower_bound=lower_bound
+        self.upper_bound=upper_bound
+class sets:
+    def __init__(self):
+        self.union=[]
+    def closed_intervals(self,u):
+        self.union.append(u)
+        
     
-def f(t):
-    v = []
-    for i in range(len(t)):
-        if(t[i] == 0):
-            m = 1
-            v.append(int(m))
-        elif(t[i] == 1):
-            m = 1
-            v.append(m)
-        elif(t[i] == 2):
-            m = 2
-            v.append(m)
-        elif(t[i] == 3):
-            m = 4
-            v.append(m)
-        else:
-            m = t[i]
-            v.append(f(m-3)+f(m-2)+f(m-1))
-    return v
+class UI:
+    def input(self):
+        n = int(input("Enter the number of sets to be entered:"))
+        s = sets()
+        for i in range(n):
+            x = int(input("Enter the lower bound"))
+            y = int(input("Enter the upper bound"))
+            w = set(x,y)
+            s.closed_intervals(w)
+        return(s)       
 
-def outputfun(t,w):
-    print( t , 'points :' ,w, 'ways')
+    def print_output(self):
+        print("n")
+    
+class union:
+    def __init__(self,x):
+        self.x=x
+    def sort(self,imprt):
+        self.x = imprt.union.sort()
+        return self.x
+    def compare(self):
+        s = sets()
+        for i in self.x:
+            for j in self.x:
+                if j[0:] > i[1:]:
+                    if j[1]>i[0]:
+                        w = set(j[1],i[0])
+                        s.closed_intervals(w)
+                        del j[1],i[0]
+                        break
+                    else:
+                        pass
+                else:
+                    pass
+        return(s)
 
-t = takePoints()
-w = f(t)
-o = outputfun(t,w)
+                    
+u =  UI()
+
+u.input()
+union.compare()
