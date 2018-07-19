@@ -18,10 +18,12 @@ class UI:
             y = int(input("Enter the upper bound"))
             w = set(x,y)
             s.closed_intervals(w)
-        return s
-class do_compute:
-    compute
-            
-class print_output:
+        return s       
+
+    def sort(self,imprt):
+        x = imprt.union.sort()
+        return x
+    
+    def print_output:
     print
     
