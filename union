@@ -1,12 +1,27 @@
 class set:
-    closed_interval
-        lower bound
-        upper bound
+    def _init__(self,lower_bound,upper_bound):
+        self.lower_bound=lower_bound
+        self.upper_bound=upper_bound
 class sets:
-    closed_intervals
+    def __init__(self):
+        self.union=[]
+    def closed_intervals(self,u):
+        self.union.append(u)
+        
+    
 class UI:
-    input
+    def input(self,n):
+        self.n = int(input("Enter the number of sets to be entered:"))
+        s = sets()
+        for i in range(n):
+            x = int(input("Enter the lower bound"))
+            y = int(input("Enter the upper bound"))
+            w = set(x,y)
+            s.closed_intervals(w)
+        return s
 class do_compute:
     compute
+            
 class print_output:
     print
+    
