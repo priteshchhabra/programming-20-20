@@ -1,5 +1,19 @@
-class vertices:
+class vertice:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
 class polygon:
+    def __init__(self):
+        self.vertices=[]
+    def formPolygon(self,ver):
+        self.vertices.append(ver)
 class point:
+    def __init__(self):
+        self.x=x
+        self.y=y
 class points:
+    def __init__(self):
+        self.point=[]
+    def add_point(self,p):
+        self.point.append(p)        
 class UI:
