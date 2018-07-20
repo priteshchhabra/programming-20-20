@@ -1,14 +1,9 @@
-class vertice:
-    def __init__(self,x,y):
-        self.x=x
-        self.y=y
-
 class polygon:
     def __init__(self):
         self.vertices=[]
     def formPolygon(self,ver):
         self.vertices.append(ver)
-
+        self.vertices.sort
         
 class point:
     def __init__(self,x,y):
@@ -25,23 +20,30 @@ class points:
 class UI:
     def input_polygon(self):
         p = polygon()
+        q = points()
         v=int(input("enter the number of vertices: "))
         for i in range(v):
             x = int(input("enter the x-coordinate: "))
             y = int(input("enter the y-coordinate: "))
-            w = vertice(x,y)
-            p.formPolygon(w)
-        return p
-    def input_points(self):
-        p = points()
+            o = point(x,y)
+            p.formPolygon(o)
         n=int(input("enter the number of points to be tested: "))
         for i in range(n):
             x = int(input("enter the x-coordinate: "))
             y = int(input("enter the y-coordinate: "))
             w = point(x,y)
-            p.add_point(w)
-        return p
+            q.add_point(w)
+        return p,q
+    def output(self):
+        if flag == 1:
+            print(point,"interior")
+        else:
+            print(point,"non-interior")
+class compute:
+    def 
+
+
 u = UI()
 u.input_polygon()
-u.input_points()
+
             
