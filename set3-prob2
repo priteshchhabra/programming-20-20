@@ -7,8 +7,10 @@ class UI:
             w = DNA(x)
             d.add_dna(w)
         return d
-    def ouput(self):
-        
+    def ouput(self,imprt):
+        for i in range():
+            print(longest[i] distinct[i])            
+            
 class DNA:
     def __init__(self,nucleotides):
         self.nucleotides=nucleotides
@@ -17,3 +19,15 @@ class all_DNA:
         self.dna=[]
     def add_dna(self,n):
         self.dna.append(n)
+class substring:
+    def __init__(self,longest,distinct):
+        self.longest=longest
+        self.distinct=distinct
+class substrins:
+    def __init__(self):
+        self.longests=[]
+        self.distincts=[]
+
+    def add_substring(self,l,d):
+        self.longests.append(l)
+        self.distinct.append(d)
