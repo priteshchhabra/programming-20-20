@@ -9,7 +9,23 @@ class UI:
         return d
     def ouput(self,imprt):
         for i in range():
-            print(longest[i] distinct[i])            
+            print(longest[i] distinct[i])
+class compute:
+    def find_substring(self):
+        u = UI()
+        flag = 0
+        for i in range():
+            for j in range():
+                flag = 0
+                if substring[i] and substring[j+1] in dna:
+                    flag += 1
+                    del substring[i]
+                else:
+                    del substring[i]
+        s.add_longests(flag)
+        return(s)
+    find_distinct
+        
             
 class DNA:
     def __init__(self,nucleotides):
@@ -27,7 +43,7 @@ class substrins:
     def __init__(self):
         self.longests=[]
         self.distincts=[]
-
-    def add_substring(self,l,d):
+    def add_longests(self,l):
         self.longests.append(l)
+    def add_distinct(self,d):
         self.distinct.append(d)
