@@ -1,12 +1,19 @@
 class UI:
     def input(self):
+        n = int(input("enter number of test cases :"))
+        d = all_DNA()
+        for i in range(n):
+            x = input("enter the string: ")
+            w = DNA(x)
+            d.add_dna(w)
+        return d
     def ouput(self):
         
-class nucleotides:
-    def __init__(self):
-        self.nucleotide=nucleotide
 class DNA:
+    def __init__(self,nucleotides):
+        self.nucleotides=nucleotides
+class all_DNA:
     def __init__(self):
         self.dna=[]
-    def form_dna(self,n):
+    def add_dna(self,n):
         self.dna.append(n)
