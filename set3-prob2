@@ -1,3 +1,12 @@
 class UI:
+    def input(self):
+    def ouput(self):
+        
 class nucleotides:
+    def __init__(self):
+        self.nucleotide=nucleotide
 class DNA:
+    def __init__(self):
+        self.dna=[]
+    def form_dna(self,n):
+        self.dna.append(n)
