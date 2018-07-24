@@ -1,13 +1,34 @@
 class UI:
-class compute:
+    def input(self):
+        e = ekgs()
+        n = int(input("enter the number of test cases: "))
+        for i in range(n):
+            x = input("Enter the pattern: ")
+            w = c_ekg(x)
+            e.add_ekg(w)
+        return e
 class c_ekg:
-    def __init__(self,character):
-        self.characters=characters
+    def __init__(self,pattern):
+        self.pattern=pattern
+    def compute(self):
+        e = ekgs()
+        n = e.added_ekg()
+        for i in range(n):
+            print("o")
+        
+             
 class ekgs:
     def __init__(self):
         self.ekg=[]
     def add_ekg(self,c):
         self.ekg.append(c)
+
+    def added_ekg(self):
+        return self.ekg
         
         
-    
+u = UI().input()
+c = c_ekg().compute
+
+
+
