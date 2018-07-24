@@ -1,4 +1,13 @@
-class UI
+class UI:
 class compute:
-class ekg:
+class c_ekg:
+    def __init__(self,character):
+        self.characters=characters
 class ekgs:
+    def __init__(self):
+        self.ekg=[]
+    def add_ekg(self,c):
+        self.ekg.append(c)
+        
+        
+    
