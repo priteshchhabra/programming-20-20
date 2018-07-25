@@ -1,0 +1,9 @@
+class UI:
+class c_polygon:
+    def __inti__(self):
+        self.point=point
+class polygons:
+    def __init__(self):
+        self.polygon=polygon
+    def add_polygon(self,p):
+        self.polygon.append(p)
