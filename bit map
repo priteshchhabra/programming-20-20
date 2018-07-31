@@ -1,0 +1,16 @@
+class UI:
+    def input(self):
+        gs = glyphs()
+        n = int(input("enter the number of test cases: "))
+        for i in range(n):
+            c=int(input("enter the characters: "))
+            g=glyph(c)
+            gs.add_glyphs(g)
+class c_glyph:
+    def __init__(self,characters):
+        self.characters=characters
+class glyphs:
+    def __init__(self,glyph):
+        self.glyph=glyph
+    def add_glyphs(self,c):
+        self.glyph.append(c)                
