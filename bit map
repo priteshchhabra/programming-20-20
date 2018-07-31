@@ -1,16 +1,44 @@
 class UI:
     def input(self):
-        gs = glyphs()
+        b=bit_map()
+        gs = c_glyphs()
         n = int(input("enter the number of test cases: "))
         for i in range(n):
-            c=int(input("enter the characters: "))
-            g=glyph(c)
-            gs.add_glyphs(g)
+            r = int(input("enter the number of rows present: "))
+            for j in range(r):
+                c=int(input("enter the characters: "))
+                g=c_glyph(c)
+                s=gs.add_glyphs(g)
+            b.add_glyphs(s)
+        return(b)
 class c_glyph:
     def __init__(self,characters):
         self.characters=characters
-class glyphs:
+class c_glyphs:
     def __init__(self,glyph):
         self.glyph=glyph
     def add_glyphs(self,c):
-        self.glyph.append(c)                
+        self.glyph.append(c)
+class bit_map:
+    def __init__(self,glyphs,required):
+        self.glyphs=gylphs
+        self.required=required
+    def add_glyphs(self,g):
+        self.glyphs.append(g)
+    def find_gylphs(self):
+        j = 0
+        s = []
+        for i in self.glyphs:
+            if self.glyphs[i]==1:
+                glyph = self.glyphs[i]
+                s.append(glyph)
+
+        for j in s:
+            s = 0
+            a.append(distance)
+            if distance != 0 and distance2 != 0:
+                s = distance
+                    if distance2<s
+                        s = disatance2
+                    return s
+        print(s)
